@@ -1,119 +1,80 @@
 @import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
 
-.todos-bg-container {
-  background-color: #f9fbfe;
-  height: 100vh;
+body {
+    background: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
 }
 
-.todos-heading {
-  text-align: center;
-  font-family: "Roboto";
-  font-size: 46px;
-  font-weight: 500;
-  margin-top: 20px;
-  margin-bottom: 20px;
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
 }
 
-.create-task-heading {
-  font-family: "Roboto";
-  font-size: 32px;
-  font-weight: 700;
+nav a {
+    margin: 0 15px;
+    color: #fff;
+    text-decoration: none;
 }
 
-.create-task-heading-subpart {
-  font-family: "Roboto";
-  font-size: 32px;
-  font-weight: 500;
+section {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
 }
 
-.todo-items-heading {
-  font-family: "Roboto";
-  font-size: 32px;
-  font-weight: 700;
+.project {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
 }
 
-.todo-items-heading-subpart {
-  font-family: "Roboto";
-  font-size: 32px;
-  font-weight: 500;
+.skills-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-.todo-items-container {
-  margin: 0px;
-  padding: 0px;
+.skills-list li {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 4px;
 }
 
-.todo-item-container {
-  margin-top: 15px;
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.todo-user-input {
-  background-color: white;
-  width: 100%;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #e4e7eb;
-  border-radius: 10px;
-  margin-top: 10px;
-  padding: 15px;
+form input, form textarea {
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-.button {
-  color: white;
-  background-color: #4c63b6;
-  font-family: "Roboto";
-  font-size: 18px;
-  border-width: 0px;
-  border-radius: 4px;
-  margin-top: 20px;
-  margin-bottom: 50px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-right: 20px;
-  padding-left: 20px;
+form button {
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
 }
 
-.label-container {
-  background-color: #e6f6ff;
-  width: 100%;
-  border-style: solid;
-  border-width: 5px;
-  border-color: #096f92;
-  border-right: none;
-  border-top: none;
-  border-bottom: none;
-  border-radius: 4px;
+form button:hover {
+    background: #555;
 }
 
-.checkbox-input {
-  width: 20px;
-  height: 20px;
-  margin-top: 12px;
-  margin-right: 12px;
-}
-
-.checkbox-label {
-  font-family: "Roboto";
-  font-size: 16px;
-  font-weight: 400;
-  width: 82%;
-  margin: 0px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border-radius: 5px;
-}
-
-.delete-icon-container {
-  text-align: right;
-  width: 18%;
-}
-
-.delete-icon {
-  padding: 15px;
-}
-
-.checked {
-  text-decoration: line-through;
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #222;
+    color: #fff;
 }
