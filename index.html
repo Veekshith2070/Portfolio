@@ -1,61 +1,71 @@
 <!DOCTYPE html>
-<html >
+<html>
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>DSA Visualizer - Bubble Sort</title>
-  <link rel="stylesheet" href="Dsa.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/ac42c3b1f7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <h1>DSA Visualizer - Bubble Sort</h1>
-  <div>
-    <button onclick="generateArray()">Generate New Array</button>
-    <button onclick="bubbleSort()">Start Bubble Sort</button>
-  </div>
-  <div id="array"></div>
+    <header id="contact-form">
+        <h1>Venkata Veekshith</h1>
+        <p>Web Developer | Coder</p>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-  <script>
-    const arrayContainer = document.getElementById("array");
-    let values = [];
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hi! I'm a passionate and results-driven developer with a strong foundation in software development and problem-solving. I specialize in Python and JavaScript for building scalable, efficient applications, and I have a solid background in Data Structures and Algorithms using C++..</p>
+    </section>
 
-    function generateArray(size = 30) {
-      arrayContainer.innerHTML = "";
-      values = Array.from({ length: size }, () => Math.floor(Math.random() * 250) + 20);
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Todos</h3>
+            <p>I have built a website on todo-list using technologies HTML,CSS,JavaScript.</p>
+            <a href="https://veekshith2070.github.io/to-do-list1/">View Project</a>
+        </div>
+        <div class="project">
+            <h3>DSA Visualizer</h3>
+            <p>This project visualizes various data structures and algorithms in action.</p>
+            <a href="https://veekshith2070.github.io/DSA-visualizer/">View Project</a>
+        </div>
+    </section>
 
-      values.forEach((value) => {
-        const bar = document.createElement("div");
-        bar.classList.add("bar");
-        bar.style.height = `${value}px`;
-        arrayContainer.appendChild(bar);
-      });
-    }
+    <section id="skills">
+        <h1>Skills</h1>
+        <ul class="skills-list">
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>Data Structures & Algorithms (C++)</li>
+        </ul>
+    </section>
 
-    async function bubbleSort() {
-      const bars = document.querySelectorAll(".bar");
-      for (let i = 0; i < bars.length - 1; i++) {
-        for (let j = 0; j < bars.length - i - 1; j++) {
-          bars[j].classList.add("active");
-          bars[j + 1].classList.add("active");
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form action="https://formspree.io/f/meokvyve" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <p id="form-response"></p>
+    </section>
 
-          await new Promise((resolve) => setTimeout(resolve, 100));
+    <footer>
+        <p>&copy; 2025 Veekshith </p>
+    </footer>
 
-          const height1 = parseInt(bars[j].style.height);
-          const height2 = parseInt(bars[j + 1].style.height);
-
-          if (height1 > height2) {
-            bars[j].style.height = `${height2}px`;
-            bars[j + 1].style.height = `${height1}px`;
-
-            [values[j], values[j + 1]] = [values[j + 1], values[j]];
-          }
-
-          bars[j].classList.remove("active");
-          bars[j + 1].classList.remove("active");
-        }
-      }
-    }
-
-    generateArray(); // Initial array on load
-  </script>
+    <script src="script.js"></script>
 </body>
+
 </html>
