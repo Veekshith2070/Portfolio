@@ -1,243 +1,762 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/ac42c3b1f7.js" crossorigin="anonymous"></script>
-   <style>
-       body {
-    background: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
-}
+    <meta charset="UTF-8">
 
-header {
-    background: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-nav a {
-    margin: 0 15px;
-    color: #fff;
-    text-decoration: none;
-}
+    <meta name="description"
+        content="Veekshith - IIT Bhubaneswar Electrical Engineering student and software developer building full-stack applications.">
 
-section {
-    padding: 40px 20px;
-    max-width: 900px;
-    margin: auto;
-}
+    <title>Veekshith | Software Developer</title>
 
-.project {
-    margin-bottom: 20px;
-    padding: 20px;
-    background: #fff;
-    border-radius: 8px;
-}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-.skills-list {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
-.skills-list li {
-    background: #333;
-    color: #fff;
-    padding: 10px;
-    border-radius: 4px;
-}
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
 
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-form input, form textarea {
-    padding: 10px;
-    font-size: 16px;
-    width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-form button {
-    padding: 10px;
-    background: #333;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-}
-
-form button:hover {
-    background: #5555;
-}
-
-footer {
-    text-align: center;
-    padding: 10px;
-    background: #222;
-    color: #fff;
-}
-
-   </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-    <h1>Venkata Veekshith</h1>
-    <p>Frontend Developer | React Enthusiast | DSA Learner</p>
+    <!-- Navigation -->
 
-<nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#education">Education</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-</nav>
+    <header class="navbar">
 
-<div style="margin-top:20px;">
-    <a href="Veekshith_Resume.pdf" target="_blank">Resume</a> |
-    <a href="https://github.com/Veekshith2070" target="_blank">GitHub</a> |
-    <a href="https://linkedin.com/in/bondada-venkata-veekshith" target="_blank">LinkedIn</a>
-</div>
+        <div class="nav-container">
 
-</header>
+            <a href="#home" class="logo">Veekshith<span>.</span></a>
 
-<section id="about">
-    <h2>About Me</h2>
-    <p>
-        I'm a B.Tech Electrical Engineering student at IIT Bhubaneswar with a strong
-        interest in Frontend Development, React.js and Data Structures & Algorithms.
-        I enjoy building responsive web applications and solving real-world problems
-        through code.
-    </p>
-</section>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#education">Education</a>
+                <a href="#contact">Contact</a>
+            </nav>
 
-<section id="skills">
-    <h2>Skills</h2>
+            <a href="Veekshith_Resume.pdf" target="_blank" class="nav-resume">
+                Resume
+            </a>
 
-<ul class="skills-list">
-    <li>HTML</li>
-    <li>CSS</li>
-    <li>JavaScript</li>
-    <li>React.js</li>
-    <li>Python</li>
-    <li>C++</li>
-    <li>Node.js</li>
-    <li>SQL</li>
-    <li>Git</li>
-    <li>GitHub</li>
-</ul>
+        </div>
 
-</section>
+    </header>
 
-<section id="education">
-    <h2>Education</h2>
 
-<div class="project">
-    <h3>Indian Institute of Technology Bhubaneswar</h3>
-    <p>
-        B.Tech in Electrical Engineering
-        <br>
-        CGPA: 8.54
-        <br>
-        Aug 2023 – Present
-    </p>
-</div>
+    <main>
 
-</section>
+        <!-- Hero -->
 
-<section id="projects">
-    <h2>Projects</h2>
+        <section id="home" class="hero">
 
-<div class="project">
-    <h3>Placement Checklist</h3>
-    <p>
-        A React.js application to track placement preparation progress across
-        DSA, Core CS, Aptitude and Projects.
-    </p>
+            <div class="hero-content">
 
-    <a href="https://veekshith2070.github.io/placement-checklist/">Live Demo</a> |
-    <a href="https://github.com/Veekshith2070/placement-checklist">GitHub</a>
-</div>
+                <p class="eyebrow">HELLO, I'M</p>
 
-<div class="project">
-    <h3>DSA Visualizer</h3>
-    <p>
-        Interactive visualization of Bubble Sort demonstrating comparisons
-        and swaps step-by-step using HTML, CSS and JavaScript.
-    </p>
+                <h1>
+                    Venkata<br>
+                    <span>Veekshith</span>
+                </h1>
 
-    <a href="https://veekshith2070.github.io/DSA-visualizer/">Live Demo</a> |
-    <a href="https://github.com/Veekshith2070/DSA-visualizer">GitHub</a>
-</div>
+                <h2>
+                    Software Developer & Full-Stack Enthusiast
+                </h2>
 
-<div class="project">
-    <h3>Portfolio Website</h3>
-    <p>
-        Personal portfolio website showcasing projects, skills and achievements.
-        Built using HTML, CSS and JavaScript.
-    </p>
+                <p class="hero-description">
+                    Electrical Engineering student at IIT Bhubaneswar
+                    building practical web applications and solving
+                    problems with code.
+                </p>
 
-    <a href="https://veekshith2070.github.io/Portfolio/">Live Demo</a> |
-    <a href="https://github.com/Veekshith2070/Portfolio">GitHub</a>
-</div>
+                <div class="hero-buttons">
 
-</section>
+                    <a href="#projects" class="btn btn-primary">
+                        View My Work
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
 
-<section id="contact">
-    <h2>Contact Me</h2>
+                    <a href="Veekshith_Resume.pdf"
+                       target="_blank"
+                       class="btn btn-secondary">
+                        <i class="fas fa-file-lines"></i>
+                        Resume
+                    </a>
 
-<div class="contact-container">
+                </div>
 
-    <div class="contact-card">
-        <i class="fas fa-envelope"></i>
-        <h4>Email</h4>
-        <p>23ee01008@iitbbs.ac.in</p>
-    </div>
+                <div class="social-links">
 
-    <div class="contact-card">
-        <i class="fab fa-github"></i>
-        <h4>GitHub</h4>
-        <a href="https://github.com/Veekshith2070" target="_blank">
-            Visit Profile
+                    <a href="https://github.com/Veekshith2070"
+                       target="_blank"
+                       aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+
+                    <a href="https://linkedin.com/in/bondada-venkata-veekshith"
+                       target="_blank"
+                       aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+
+                    <a href="mailto:23ee01008@iitbbs.ac.in"
+                       aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="hero-card">
+
+                <div class="code-window">
+
+                    <div class="window-header">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <div class="code-content">
+
+                        <p><span class="purple">const</span> developer = {</p>
+
+                        <p class="indent">
+                            name:
+                            <span class="green">"Veekshith"</span>,
+                        </p>
+
+                        <p class="indent">
+                            college:
+                            <span class="green">"IIT Bhubaneswar"</span>,
+                        </p>
+
+                        <p class="indent">
+                            role:
+                            <span class="green">"Software Developer"</span>,
+                        </p>
+
+                        <p class="indent">
+                            skills: [
+                        </p>
+
+                        <p class="indent2">
+                            <span class="green">"React"</span>,
+                            <span class="green">"Node.js"</span>,
+                        </p>
+
+                        <p class="indent2">
+                            <span class="green">"PostgreSQL"</span>,
+                            <span class="green">"C++"</span>
+                        </p>
+
+                        <p class="indent">
+                            ]
+                        </p>
+
+                        <p>};</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- About -->
+
+        <section id="about" class="section">
+
+            <div class="section-heading">
+                <span>01</span>
+                <h2>About Me</h2>
+            </div>
+
+            <div class="about-grid">
+
+                <div class="about-text">
+
+                    <p>
+                        I'm a B.Tech Electrical Engineering student at
+                        <strong>IIT Bhubaneswar</strong> with a growing
+                        focus on software development.
+                    </p>
+
+                    <p>
+                        I enjoy building web applications, working with
+                        APIs and databases, and solving problems using
+                        Data Structures & Algorithms.
+                    </p>
+
+                    <p>
+                        My current interests include
+                        <strong>full-stack development, backend systems,
+                        databases and software engineering.</strong>
+                    </p>
+
+                </div>
+
+                <div class="about-stats">
+
+                    <div class="stat">
+                        <strong>8.54</strong>
+                        <span>CGPA</span>
+                    </div>
+
+                    <div class="stat">
+                        <strong>2027</strong>
+                        <span>Graduation</span>
+                    </div>
+
+                    <div class="stat">
+                        <strong>IIT</strong>
+                        <span>Bhubaneswar</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Skills -->
+
+        <section id="skills" class="section section-dark">
+
+            <div class="section-heading">
+                <span>02</span>
+                <h2>Skills</h2>
+            </div>
+
+            <div class="skills-grid">
+
+                <div class="skill-category">
+
+                    <i class="fas fa-code"></i>
+
+                    <h3>Languages</h3>
+
+                    <div class="skill-tags">
+                        <span>C++</span>
+                        <span>JavaScript</span>
+                        <span>Python</span>
+                        <span>SQL</span>
+                    </div>
+
+                </div>
+
+
+                <div class="skill-category">
+
+                    <i class="fas fa-laptop-code"></i>
+
+                    <h3>Frontend</h3>
+
+                    <div class="skill-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>React.js</span>
+                        <span>Vite</span>
+                    </div>
+
+                </div>
+
+
+                <div class="skill-category">
+
+                    <i class="fas fa-server"></i>
+
+                    <h3>Backend</h3>
+
+                    <div class="skill-tags">
+                        <span>Node.js</span>
+                        <span>Express.js</span>
+                        <span>REST APIs</span>
+                        <span>JWT</span>
+                    </div>
+
+                </div>
+
+
+                <div class="skill-category">
+
+                    <i class="fas fa-database"></i>
+
+                    <h3>Database & Tools</h3>
+
+                    <div class="skill-tags">
+                        <span>PostgreSQL</span>
+                        <span>SQLite</span>
+                        <span>Git</span>
+                        <span>GitHub</span>
+                        <span>Render</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Experience -->
+
+        <section id="experience" class="section">
+
+            <div class="section-heading">
+                <span>03</span>
+                <h2>Experience</h2>
+            </div>
+
+            <div class="experience-card">
+
+                <div class="experience-top">
+
+                    <div>
+                        <h3>Research Intern</h3>
+                        <p class="company">
+                            IIT Bhubaneswar
+                        </p>
+                    </div>
+
+                    <span class="experience-type">
+                        Research
+                    </span>
+
+                </div>
+
+                <p class="experience-description">
+                    Worked on EEG and intracranial EEG (iEEG) signal
+                    reconstruction, exploring approaches for reconstructing
+                    brain signals from scalp EEG recordings.
+                </p>
+
+                <ul>
+
+                    <li>
+                        Worked with EEG/iEEG datasets and signal-processing
+                        workflows.
+                    </li>
+
+                    <li>
+                        Generated and evaluated synthetic EEG/iEEG datasets
+                        using Python and MATLAB.
+                    </li>
+
+                    <li>
+                        Investigated signal reconstruction approaches and
+                        evaluated generated data using quantitative metrics.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </section>
+
+
+        <!-- Projects -->
+
+        <section id="projects" class="section section-dark">
+
+            <div class="section-heading">
+                <span>04</span>
+                <h2>Featured Projects</h2>
+            </div>
+
+            <div class="projects-grid">
+
+
+                <!-- SplitWise -->
+
+                <article class="project-card featured-project">
+
+                    <div class="project-icon">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+
+                    <div class="project-content">
+
+                        <div class="project-title-row">
+
+                            <h3>SplitWise Clone</h3>
+
+                            <span class="featured-label">
+                                Full-Stack
+                            </span>
+
+                        </div>
+
+                        <p>
+                            A full-stack expense management application
+                            for creating groups, tracking expenses,
+                            splitting payments and managing settlements.
+                        </p>
+
+                        <ul>
+
+                            <li>
+                                Implemented JWT-based authentication and
+                                protected API routes.
+                            </li>
+
+                            <li>
+                                Built group and member management with
+                                relational PostgreSQL data models.
+                            </li>
+
+                            <li>
+                                Implemented equal and custom expense
+                                splitting with precise paise-level
+                                calculations.
+                            </li>
+
+                            <li>
+                                Added balance calculation and a settlement
+                                workflow with pending, accepted and rejected
+                                requests.
+                            </li>
+
+                        </ul>
+
+                        <div class="tech-stack">
+
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>Express</span>
+                            <span>PostgreSQL</span>
+                            <span>JWT</span>
+
+                        </div>
+
+                        <div class="project-links">
+
+                            <a href="https://github.com/Veekshith2070/splitwise-clone"
+                               target="_blank">
+                                <i class="fab fa-github"></i>
+                                GitHub
+                            </a>
+
+                            <a href="https://splitwise-clone-frontend-so3i.onrender.com"
+                               target="_blank">
+                                <i class="fas fa-arrow-up-right-from-square"></i>
+                                Live Demo
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Placement Checklist -->
+
+                <article class="project-card">
+
+                    <div class="project-icon">
+                        <i class="fas fa-list-check"></i>
+                    </div>
+
+                    <div class="project-content">
+
+                        <h3>Placement Checklist</h3>
+
+                        <p>
+                            A React application designed to organize and
+                            track placement preparation across DSA,
+                            Core CS, aptitude and projects.
+                        </p>
+
+                        <div class="tech-stack">
+                            <span>React.js</span>
+                            <span>JavaScript</span>
+                            <span>CSS</span>
+                        </div>
+
+                        <div class="project-links">
+
+                            <a href="https://github.com/Veekshith2070/placement-checklist"
+                               target="_blank">
+                                <i class="fab fa-github"></i>
+                                GitHub
+                            </a>
+
+                            <a href="https://veekshith2070.github.io/placement-checklist/"
+                               target="_blank">
+                                <i class="fas fa-arrow-up-right-from-square"></i>
+                                Live Demo
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- DSA Visualizer -->
+
+                <article class="project-card">
+
+                    <div class="project-icon">
+                        <i class="fas fa-chart-column"></i>
+                    </div>
+
+                    <div class="project-content">
+
+                        <h3>DSA Visualizer</h3>
+
+                        <p>
+                            An interactive visualization tool that
+                            demonstrates sorting algorithms through
+                            step-by-step comparisons and swaps.
+                        </p>
+
+                        <div class="tech-stack">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+
+                        <div class="project-links">
+
+                            <a href="https://github.com/Veekshith2070/DSA-visualizer"
+                               target="_blank">
+                                <i class="fab fa-github"></i>
+                                GitHub
+                            </a>
+
+                            <a href="https://veekshith2070.github.io/DSA-visualizer/"
+                               target="_blank">
+                                <i class="fas fa-arrow-up-right-from-square"></i>
+                                Live Demo
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Portfolio -->
+
+                <article class="project-card">
+
+                    <div class="project-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+
+                    <div class="project-content">
+
+                        <h3>Personal Portfolio</h3>
+
+                        <p>
+                            Responsive personal portfolio showcasing
+                            software projects, technical skills,
+                            education and experience.
+                        </p>
+
+                        <div class="tech-stack">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+
+                        <div class="project-links">
+
+                            <a href="https://github.com/Veekshith2070/Portfolio"
+                               target="_blank">
+                                <i class="fab fa-github"></i>
+                                GitHub
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- Education -->
+
+        <section id="education" class="section">
+
+            <div class="section-heading">
+                <span>05</span>
+                <h2>Education</h2>
+            </div>
+
+            <div class="education-card">
+
+                <div class="education-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+
+                <div>
+
+                    <h3>Indian Institute of Technology Bhubaneswar</h3>
+
+                    <p class="degree">
+                        B.Tech in Electrical Engineering
+                    </p>
+
+                    <div class="education-details">
+
+                        <span>
+                            <i class="fas fa-calendar"></i>
+                            2023 – 2027
+                        </span>
+
+                        <span>
+                            <i class="fas fa-star"></i>
+                            CGPA: 8.54
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Contact -->
+
+        <section id="contact" class="section contact-section">
+
+            <div class="section-heading">
+                <span>06</span>
+                <h2>Let's Connect</h2>
+            </div>
+
+            <p class="contact-intro">
+                Interested in working together or discussing an opportunity?
+                Feel free to reach out.
+            </p>
+
+            <div class="contact-links">
+
+                <a href="mailto:23ee01008@iitbbs.ac.in"
+                   class="contact-link">
+
+                    <i class="fas fa-envelope"></i>
+
+                    <div>
+                        <small>Email</small>
+                        <span>23ee01008@iitbbs.ac.in</span>
+                    </div>
+
+                </a>
+
+
+                <a href="https://github.com/Veekshith2070"
+                   target="_blank"
+                   class="contact-link">
+
+                    <i class="fab fa-github"></i>
+
+                    <div>
+                        <small>GitHub</small>
+                        <span>Veekshith2070</span>
+                    </div>
+
+                </a>
+
+
+                <a href="https://linkedin.com/in/bondada-venkata-veekshith"
+                   target="_blank"
+                   class="contact-link">
+
+                    <i class="fab fa-linkedin"></i>
+
+                    <div>
+                        <small>LinkedIn</small>
+                        <span>Connect with me</span>
+                    </div>
+
+                </a>
+
+            </div>
+
+
+            <form action="https://formspree.io/f/meokvyve"
+                  method="POST">
+
+                <div class="form-row">
+
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="Your Name"
+                        required
+                    >
+
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Your Email"
+                        required
+                    >
+
+                </div>
+
+                <textarea
+                    name="message"
+                    placeholder="Your Message"
+                    required
+                ></textarea>
+
+                <button type="submit">
+                    Send Message
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+
+                <p id="form-response"></p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 Venkata Veekshith · Built with HTML, CSS & JavaScript
+        </p>
+
+        <a href="#home">
+            Back to top ↑
         </a>
-    </div>
 
-    <div class="contact-card">
-        <i class="fab fa-linkedin"></i>
-        <h4>LinkedIn</h4>
-        <a href="https://linkedin.com/in/bondada-venkata-veekshith" target="_blank">
-            View Profile
-        </a>
-    </div>
+    </footer>
 
-</div>
 
-<form action="https://formspree.io/f/meokvyve" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required>
-
-    <input type="email" name="email" placeholder="Your Email" required>
-
-    <textarea name="message" placeholder="Your Message" required></textarea>
-
-    <button type="submit">Send Message</button>
-</form>
-
-</section>
-
-<footer>
-    <p>© 2025 Venkata Veekshith | IIT Bhubaneswar</p>
-</footer>
+    <script src="script.js"></script>
 
 </body>
 
