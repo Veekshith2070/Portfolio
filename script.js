@@ -1,30 +1,42 @@
+// Smooth scrolling for navigation links
 
+document.querySelectorAll('nav a, .logo, footer a').forEach(anchor => {
 
-document.querySelectorAll('nav a').forEach(anchor => {
-anchor.addEventListener('click', function(e) {
-e.preventDefault();
+    anchor.addEventListener('click', function (e) {
 
+        const href = this.getAttribute('href');
 
-    const target = document.querySelector(this.getAttribute('href'));
+        if (!href || !href.startsWith('#')) {
+            return;
+        }
 
-    if (target) {
-        target.scrollIntoView({
-            behavior: 'smooth'
-        });
-    }
+        e.preventDefault();
+
+        const target = document.querySelector(href);
+
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+    });
+
 });
 
 
-});
-
+// Contact form response
 
 const form = document.querySelector("form");
 const responseMessage = document.getElementById("form-response");
 
 if (form && responseMessage) {
-form.addEventListener("submit", () => {
-responseMessage.textContent =
-"Thank you for reaching out! Your message has been sent.";
-responseMessage.style.color = "#38bdf8";
-});
+
+    form.addEventListener("submit", () => {
+
+        responseMessage.textContent =
+            "Thanks for reaching out! Your message is being sent.";
+
+    });
+
 }
