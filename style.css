@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 /* =========================================================
-   ROOT
+   VARIABLES
 ========================================================= */
 
 :root {
     --bg: #080b12;
     --bg-secondary: #0d111b;
+
     --card: #111722;
     --card-hover: #151c29;
 
@@ -51,7 +52,6 @@ body {
 
 a {
     color: inherit;
-    text-decoration: none;
 }
 
 button,
@@ -64,14 +64,9 @@ button {
     border: none;
 }
 
-ul {
-    padding: 0;
-    margin: 0;
-}
-
 .container {
     width: min(100% - 40px, var(--max-width));
-    margin: 0 auto;
+    margin: auto;
 }
 
 
@@ -81,12 +76,16 @@ ul {
 
 .navbar {
     position: fixed;
+
     top: 0;
     left: 0;
+
     width: 100%;
+
     z-index: 1000;
 
     background: rgba(8, 11, 18, 0.92);
+
     backdrop-filter: blur(15px);
 
     border-bottom: 1px solid var(--border);
@@ -94,6 +93,7 @@ ul {
 
 .nav-container {
     max-width: var(--max-width);
+
     margin: auto;
 
     min-height: 70px;
@@ -107,9 +107,12 @@ ul {
 
 .logo {
     font-family: 'JetBrains Mono', monospace;
+
     font-size: 22px;
     font-weight: 800;
+
     text-decoration: none;
+
     letter-spacing: -1px;
 }
 
@@ -119,12 +122,15 @@ ul {
 
 .nav-links {
     display: flex;
-    gap: 25px;
+
     align-items: center;
+
+    gap: 25px;
 }
 
 .nav-links a {
     color: var(--text-secondary);
+
     text-decoration: none;
 
     font-size: 14px;
@@ -138,11 +144,6 @@ ul {
     color: var(--primary);
 }
 
-
-/* =========================================================
-   MOBILE MENU
-========================================================= */
-
 .menu-toggle {
     display: none;
 
@@ -150,6 +151,7 @@ ul {
     height: 42px;
 
     background: transparent;
+
     cursor: pointer;
 }
 
@@ -162,8 +164,6 @@ ul {
     margin: 5px auto;
 
     background: var(--text);
-
-    transition: var(--transition);
 }
 
 
@@ -172,19 +172,31 @@ ul {
 ========================================================= */
 
 .section {
-    padding: 100px 0;
+    max-width: var(--max-width);
+
+    margin: auto;
+
+    padding: 100px 20px;
 }
 
 .section-alt {
+    max-width: none;
+
+    padding-left: max(20px, calc((100vw - var(--max-width)) / 2));
+    padding-right: max(20px, calc((100vw - var(--max-width)) / 2));
+
     background: var(--bg-secondary);
-    border-top: 1px solid rgba(30, 41, 59, 0.7);
-    border-bottom: 1px solid rgba(30, 41, 59, 0.7);
+
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
 }
 
 .section-heading {
     display: flex;
-    align-items: flex-start;
-    gap: 20px;
+
+    align-items: center;
+
+    gap: 15px;
 
     margin-bottom: 50px;
 }
@@ -193,27 +205,25 @@ ul {
     color: var(--primary);
 
     font-family: 'JetBrains Mono', monospace;
-    font-size: 14px;
-    font-weight: 600;
 
-    padding-top: 5px;
+    font-size: 14px;
 }
 
 .section-label {
     color: var(--primary);
 
     font-family: 'JetBrains Mono', monospace;
+
     font-size: 12px;
     font-weight: 600;
 
     letter-spacing: 2px;
 
-    margin-bottom: 5px;
+    margin-bottom: 2px;
 }
 
 .section-heading h2 {
     font-size: 32px;
-    line-height: 1.2;
 
     letter-spacing: -1px;
 }
@@ -225,25 +235,23 @@ ul {
 
 .hero {
     max-width: var(--max-width);
-    min-height: 100vh;
+
+    min-height: calc(100vh - 70px);
 
     margin: auto;
-    padding: 120px 20px 80px;
+
+    padding: 110px 20px 80px;
 
     display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
+
+    grid-template-columns: 1.2fr 0.8fr;
 
     align-items: center;
+
     gap: 60px;
 }
 
-.hero-content {
-    min-width: 0;
-}
-
 .eyebrow {
-    display: inline-block;
-
     color: var(--primary);
 
     font-size: 13px;
@@ -251,13 +259,14 @@ ul {
 
     letter-spacing: 3px;
 
-    margin-bottom: 18px;
+    margin-bottom: 15px;
 }
 
 .hero h1 {
     font-size: clamp(3.5rem, 8vw, 6rem);
 
     line-height: 0.95;
+
     letter-spacing: -4px;
 
     margin-bottom: 25px;
@@ -265,6 +274,7 @@ ul {
 
 .hero h1 span {
     display: block;
+
     color: var(--primary);
 }
 
@@ -280,6 +290,7 @@ ul {
 
 .hero-buttons {
     display: flex;
+
     gap: 12px;
 
     flex-wrap: wrap;
@@ -289,6 +300,7 @@ ul {
 
 .btn {
     display: inline-flex;
+
     align-items: center;
     justify-content: center;
 
@@ -308,11 +320,13 @@ ul {
 
 .btn-primary {
     background: var(--primary);
+
     color: #020617;
 }
 
 .btn-primary:hover {
     background: #7dd3fc;
+
     transform: translateY(-2px);
 }
 
@@ -324,65 +338,82 @@ ul {
 
 .btn-secondary:hover {
     border-color: var(--primary);
+
     color: var(--primary);
 }
 
 .hero-links {
     display: flex;
+
     gap: 20px;
+
     flex-wrap: wrap;
 }
 
 .hero-links a {
-    color: var(--text-muted);
+    color: var(--text-secondary);
 
     font-family: 'JetBrains Mono', monospace;
+
     font-size: 12px;
+
+    text-decoration: none;
 
     transition: var(--transition);
 }
 
 .hero-links a:hover {
     color: var(--primary);
+
+    transform: translateY(-2px);
 }
 
 
 /* =========================================================
-   CODE CARD
+   CODE WINDOW
 ========================================================= */
 
 .code-card {
-    background: var(--card);
+    width: 100%;
+
+    max-width: 470px;
+
+    justify-self: end;
+
+    background: #0b1120;
 
     border: 1px solid var(--border);
-    border-radius: 12px;
+
+    border-radius: 14px;
 
     overflow: hidden;
 
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.4);
 }
 
 .window-bar {
     height: 42px;
 
     display: flex;
+
     align-items: center;
+
+    gap: 7px;
 
     padding: 0 15px;
 
     border-bottom: 1px solid var(--border);
-
-    background: #0d121c;
 }
 
 .window-dots {
     display: flex;
-    gap: 6px;
+
+    gap: 7px;
 }
 
 .window-dots span {
-    width: 9px;
-    height: 9px;
+    width: 10px;
+    height: 10px;
 
     border-radius: 50%;
 
@@ -396,11 +427,13 @@ ul {
     color: var(--text-muted);
 
     font-family: 'JetBrains Mono', monospace;
+
     font-size: 11px;
 }
 
 .code-content {
-    padding: 25px;
+    padding: 30px;
+
     overflow-x: auto;
 }
 
@@ -410,7 +443,9 @@ ul {
 
 .code-content code {
     font-family: 'JetBrains Mono', monospace;
+
     font-size: 12px;
+
     line-height: 1.9;
 
     color: #cbd5e1;
@@ -421,7 +456,7 @@ ul {
 }
 
 .class-name {
-    color: #38bdf8;
+    color: var(--primary);
 }
 
 .function {
@@ -440,54 +475,58 @@ ul {
 .about-grid {
     display: grid;
 
-    grid-template-columns: 1.4fr 0.6fr;
+    grid-template-columns: 1.5fr 1fr;
 
-    gap: 60px;
+    gap: 70px;
 
-    align-items: start;
+    align-items: center;
 }
 
 .about-main {
-    max-width: 720px;
-}
-
-.about-main p {
     color: var(--text-secondary);
 
     font-size: 16px;
+}
 
+.about-main p {
     margin-bottom: 20px;
 }
 
 .about-main .large-text {
-    color: var(--text);
+    font-size: 19px;
 
-    font-size: 22px;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 .about-main strong {
-    color: var(--primary);
+    color: var(--text);
 }
 
 .about-stats {
     display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
     gap: 15px;
 }
 
 .stat-card {
-    padding: 22px;
+    padding: 25px 10px;
+
+    text-align: center;
 
     background: var(--card);
 
     border: 1px solid var(--border);
-    border-radius: 10px;
+
+    border-radius: 12px;
 
     transition: var(--transition);
 }
 
 .stat-card:hover {
-    border-color: var(--primary);
+    border-color: #334155;
+
     transform: translateY(-3px);
 }
 
@@ -496,17 +535,15 @@ ul {
 
     color: var(--primary);
 
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 25px;
-    font-weight: 600;
+    font-size: 27px;
 
-    margin-bottom: 5px;
+    font-weight: 700;
 }
 
 .stat-label {
     color: var(--text-secondary);
 
-    font-size: 13px;
+    font-size: 12px;
 }
 
 
@@ -528,16 +565,16 @@ ul {
     background: var(--card);
 
     border: 1px solid var(--border);
+
     border-radius: 12px;
 
     transition: var(--transition);
 }
 
 .skill-card:hover {
-    background: var(--card-hover);
-    border-color: var(--primary);
+    border-color: #334155;
 
-    transform: translateY(-4px);
+    transform: translateY(-3px);
 }
 
 .skill-icon {
@@ -545,27 +582,28 @@ ul {
     height: 48px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
-    margin-bottom: 18px;
+    margin-bottom: 15px;
 
     background: #0c2635;
 
     color: var(--primary);
 
-    border: 1px solid #164e63;
-    border-radius: 9px;
+    border-radius: 10px;
 
     font-family: 'JetBrains Mono', monospace;
-    font-size: 13px;
+
+    font-size: 14px;
     font-weight: 600;
 }
 
 .skill-card h3 {
-    font-size: 19px;
+    font-size: 18px;
 
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .skill-card p {
@@ -573,7 +611,7 @@ ul {
 
     font-size: 14px;
 
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 .skill-tags,
@@ -582,24 +620,24 @@ ul {
 
     flex-wrap: wrap;
 
-    gap: 8px;
+    gap: 9px;
 }
 
 .skill-tags span,
 .tech-tags span {
     display: inline-block;
 
-    padding: 6px 10px;
+    padding: 6px 11px;
 
     background: #172033;
 
     border: 1px solid #263449;
+
     border-radius: 6px;
 
     color: #cbd5e1;
 
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
+    font-size: 12px;
 }
 
 
@@ -613,78 +651,63 @@ ul {
     background: var(--card);
 
     border: 1px solid var(--border);
+
     border-radius: 14px;
-
-    position: relative;
-
-    overflow: hidden;
-}
-
-.experience-card::before {
-    content: "";
-
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
-    width: 3px;
-    height: 100%;
-
-    background: var(--primary);
 }
 
 .experience-top {
     display: flex;
 
     justify-content: space-between;
-    align-items: flex-start;
 
-    gap: 30px;
+    gap: 20px;
 
-    padding-bottom: 25px;
+    margin-bottom: 25px;
+
+    padding-bottom: 20px;
 
     border-bottom: 1px solid var(--border);
 }
 
 .experience-type {
-    color: var(--primary);
+    display: inline-block;
 
-    font-family: 'JetBrains Mono', monospace;
+    padding: 6px 12px;
 
-    font-size: 11px;
-    font-weight: 600;
+    border: 1px solid var(--border);
 
-    letter-spacing: 1.5px;
+    border-radius: 20px;
 
-    margin-bottom: 8px;
+    color: var(--text-secondary);
+
+    font-size: 12px;
+
+    margin-bottom: 10px;
 }
 
 .experience-top h3 {
-    font-size: 23px;
+    font-size: 22px;
 
-    margin-bottom: 5px;
+    margin-bottom: 4px;
 }
 
 .experience-org {
-    color: var(--text-muted);
+    color: var(--primary);
+
+    margin-top: 4px;
 
     font-size: 14px;
 }
 
 .experience-date {
+    color: var(--text-secondary);
+
+    font-size: 12px;
+
     white-space: nowrap;
-
-    color: var(--text-muted);
-
-    font-family: 'JetBrains Mono', monospace;
-
-    font-size: 11px;
 }
 
 .experience-body {
-    padding-top: 28px;
-
     display: grid;
 
     grid-template-columns: 0.7fr 1.3fr;
@@ -705,13 +728,13 @@ ul {
 .experience-points li {
     position: relative;
 
-    color: var(--text-secondary);
+    color: #cbd5e1;
 
     font-size: 14px;
 
-    padding-left: 22px;
+    padding-left: 20px;
 
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .experience-points li::before {
@@ -731,10 +754,9 @@ ul {
 
     border-top: 1px solid var(--border);
 
-    color: var(--text-muted);
+    color: var(--text-secondary);
 
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
+    font-size: 12px;
 }
 
 .research-note span {
@@ -753,93 +775,83 @@ ul {
 
     grid-template-columns: repeat(2, 1fr);
 
-    gap: 20px;
+    gap: 22px;
 }
 
 .project-card {
-    min-height: 430px;
-
     padding: 30px;
 
     background: var(--card);
 
     border: 1px solid var(--border);
-    border-radius: 12px;
 
-    display: flex;
-    flex-direction: column;
+    border-radius: 14px;
 
     transition: var(--transition);
 }
 
 .project-card:hover {
-    background: var(--card-hover);
-
-    border-color: var(--primary);
-
     transform: translateY(-5px);
+
+    border-color: #334155;
 }
 
 .featured-project {
     grid-column: span 2;
 
-    min-height: auto;
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 0;
 }
 
 .project-top {
     display: flex;
 
     align-items: center;
+
     justify-content: space-between;
 
-    margin-bottom: 25px;
+    margin-bottom: 18px;
 }
 
 .project-label {
-    color: var(--text-muted);
+    color: var(--text-secondary);
 
     font-family: 'JetBrains Mono', monospace;
 
     font-size: 10px;
-    font-weight: 600;
 
-    letter-spacing: 1.2px;
+    letter-spacing: 1px;
 }
 
 .featured-label {
     color: var(--primary);
+
+    font-weight: 700;
 }
 
 .project-number {
-    color: #334155;
+    color: var(--text-muted);
 
     font-family: 'JetBrains Mono', monospace;
 
-    font-size: 13px;
-    font-weight: 600;
-}
-
-.project-content {
-    display: flex;
-    flex-direction: column;
-
-    height: 100%;
+    font-size: 12px;
 }
 
 .project-content h3 {
-    font-size: 22px;
+    font-size: 21px;
 
-    line-height: 1.3;
-
-    margin-bottom: 14px;
+    margin-bottom: 12px;
 }
 
-.project-content p {
+.project-content > p {
     color: var(--text-secondary);
 
     font-size: 14px;
 
-    margin-bottom: 22px;
+    margin-bottom: 18px;
 }
 
 .project-highlights {
@@ -847,9 +859,9 @@ ul {
 
     grid-template-columns: repeat(3, 1fr);
 
-    gap: 10px;
+    gap: 12px;
 
-    margin-bottom: 25px;
+    margin: 20px 0;
 }
 
 .project-highlights div {
@@ -863,7 +875,7 @@ ul {
 
     color: var(--text-secondary);
 
-    font-size: 11px;
+    font-size: 12px;
 }
 
 .project-highlights span {
@@ -878,20 +890,28 @@ ul {
     margin-bottom: 5px;
 }
 
-.tech-tags {
-    margin-top: auto;
+.project-meta {
+    margin-top: 20px;
 
-    padding-top: 15px;
+    color: var(--text-secondary);
+
+    font-size: 12px;
+}
+
+.project-meta span {
+    color: var(--primary);
+
+    margin-right: 7px;
 }
 
 .project-links {
     display: flex;
 
+    gap: 20px;
+
     flex-wrap: wrap;
 
-    gap: 10px;
-
-    margin-top: 22px;
+    margin-top: 20px;
 }
 
 .project-link {
@@ -899,56 +919,39 @@ ul {
 
     align-items: center;
 
-    padding: 9px 14px;
+    gap: 7px;
 
-    border: 1px solid var(--border);
+    color: var(--primary);
 
-    border-radius: 7px;
+    font-size: 13px;
 
-    color: var(--text-secondary);
-
-    font-size: 12px;
     font-weight: 600;
+
+    text-decoration: none;
 
     transition: var(--transition);
 }
 
 .project-link:hover {
-    border-color: var(--primary);
+    color: #7dd3fc;
 
-    color: var(--primary);
+    transform: translateY(-2px);
 }
 
 .primary-link {
+    padding: 9px 14px;
+
     background: var(--primary);
 
-    border-color: var(--primary);
-
     color: #020617;
+
+    border-radius: 7px;
 }
 
 .primary-link:hover {
     background: #7dd3fc;
 
     color: #020617;
-}
-
-.project-meta {
-    margin-top: auto;
-
-    padding-top: 22px;
-
-    color: var(--text-muted);
-
-    font-family: 'JetBrains Mono', monospace;
-
-    font-size: 11px;
-}
-
-.project-meta span {
-    color: var(--primary);
-
-    margin-right: 6px;
 }
 
 .projects-footnote {
@@ -967,19 +970,21 @@ ul {
 ========================================================= */
 
 .education-card {
-    padding: 30px;
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding: 35px;
 
     background: var(--card);
 
     border: 1px solid var(--border);
-    border-radius: 12px;
 
-    display: flex;
-
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 30px;
+    border-radius: 14px;
 }
 
 .education-main {
@@ -987,7 +992,7 @@ ul {
 
     align-items: center;
 
-    gap: 20px;
+    gap: 25px;
 }
 
 .education-icon {
@@ -997,17 +1002,18 @@ ul {
     flex-shrink: 0;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
     background: #0c2635;
 
-    border: 1px solid #164e63;
-    border-radius: 10px;
-
     color: var(--primary);
 
+    border-radius: 10px;
+
     font-family: 'JetBrains Mono', monospace;
+
     font-size: 14px;
     font-weight: 700;
 }
@@ -1015,20 +1021,13 @@ ul {
 .education-degree {
     color: var(--primary);
 
-    font-family: 'JetBrains Mono', monospace;
-
-    font-size: 11px;
-    font-weight: 600;
-
-    letter-spacing: 1px;
+    font-size: 12px;
 
     margin-bottom: 4px;
 }
 
 .education-main h3 {
-    font-size: 21px;
-
-    margin-bottom: 3px;
+    font-size: 20px;
 }
 
 .education-institute {
@@ -1040,29 +1039,27 @@ ul {
 .education-details {
     display: flex;
 
-    gap: 40px;
+    gap: 30px;
 }
 
 .education-details div {
-    text-align: right;
+    text-align: center;
 }
 
 .education-details span {
     display: block;
 
-    color: var(--text-muted);
+    color: var(--text-secondary);
 
     font-size: 11px;
 
-    margin-bottom: 2px;
+    margin-bottom: 3px;
 }
 
 .education-details strong {
     color: var(--primary);
 
-    font-family: 'JetBrains Mono', monospace;
-
-    font-size: 17px;
+    font-size: 18px;
 }
 
 
@@ -1089,7 +1086,7 @@ ul {
 .contact-intro > p {
     color: var(--text-secondary);
 
-    font-size: 14px;
+    font-size: 15px;
 
     margin-bottom: 25px;
 }
@@ -1103,11 +1100,14 @@ ul {
 }
 
 .contact-links a {
-    padding: 14px 16px;
+    display: block;
+
+    padding: 15px;
 
     background: var(--card);
 
     border: 1px solid var(--border);
+
     border-radius: 8px;
 
     color: var(--text-secondary);
@@ -1123,6 +1123,8 @@ ul {
     border-color: var(--primary);
 
     color: var(--primary);
+
+    transform: translateX(3px);
 }
 
 .contact-links span {
@@ -1144,6 +1146,7 @@ ul {
     background: var(--card);
 
     border: 1px solid var(--border);
+
     border-radius: 12px;
 }
 
@@ -1174,20 +1177,19 @@ ul {
 .form-group textarea {
     width: 100%;
 
-    padding: 11px 13px;
+    padding: 12px 14px;
 
-    background: #0b111c;
+    background: #0b1120;
 
     border: 1px solid var(--border);
-    border-radius: 7px;
+
+    border-radius: 8px;
 
     color: var(--text);
 
-    font-size: 13px;
-
     outline: none;
 
-    resize: vertical;
+    font-size: 13px;
 
     transition: var(--transition);
 }
@@ -1195,8 +1197,6 @@ ul {
 .form-group input:focus,
 .form-group textarea:focus {
     border-color: var(--primary);
-
-    box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.08);
 }
 
 .form-group input::placeholder,
@@ -1214,64 +1214,57 @@ ul {
 ========================================================= */
 
 .footer {
-    padding: 25px 0;
+    padding: 30px 20px;
 
-    background: #060912;
+    background: var(--bg-secondary);
 
     border-top: 1px solid var(--border);
+
+    color: var(--text-secondary);
+
+    font-size: 13px;
 }
 
 .footer-container {
     display: flex;
 
     align-items: center;
+
     justify-content: space-between;
 
     gap: 20px;
 }
 
-.footer p {
-    color: var(--text-muted);
-
-    font-size: 11px;
-}
-
 .footer a {
-    color: var(--text-secondary);
-
-    font-family: 'JetBrains Mono', monospace;
-
-    font-size: 11px;
-
-    transition: var(--transition);
-}
-
-.footer a:hover {
     color: var(--primary);
+
+    text-decoration: none;
 }
 
 
 /* =========================================================
-   REVEAL ANIMATION
+   ANIMATION
 ========================================================= */
 
 .reveal {
     opacity: 0;
+
     transform: translateY(20px);
 
     transition:
-        opacity 0.7s ease,
-        transform 0.7s ease;
+        opacity 0.6s ease,
+        transform 0.6s ease;
 }
 
 .reveal.visible {
     opacity: 1;
+
     transform: translateY(0);
 }
 
 
 /* =========================================================
-   RESPONSIVE — TABLET
+   TABLET
 ========================================================= */
 
 @media (max-width: 900px) {
@@ -1279,26 +1272,29 @@ ul {
     .hero {
         grid-template-columns: 1fr;
 
-        padding-top: 130px;
+        text-align: center;
 
-        gap: 50px;
+        padding-top: 100px;
     }
 
-    .hero h1 {
-        font-size: clamp(3rem, 10vw, 5rem);
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons,
+    .hero-links {
+        justify-content: center;
     }
 
     .code-card {
-        max-width: 700px;
+        justify-self: center;
     }
 
     .about-grid {
         grid-template-columns: 1fr;
-        gap: 35px;
-    }
 
-    .about-stats {
-        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
     }
 
     .experience-body {
@@ -1309,12 +1305,14 @@ ul {
 
     .contact-grid {
         grid-template-columns: 1fr;
+
+        gap: 35px;
     }
 }
 
 
 /* =========================================================
-   RESPONSIVE — MOBILE
+   MOBILE
 ========================================================= */
 
 @media (max-width: 700px) {
@@ -1323,8 +1321,8 @@ ul {
         width: min(100% - 30px, var(--max-width));
     }
 
-    .section {
-        padding: 75px 0;
+    .navbar {
+        position: fixed;
     }
 
     .nav-container {
@@ -1339,6 +1337,7 @@ ul {
         position: absolute;
 
         top: 65px;
+
         left: 15px;
         right: 15px;
 
@@ -1355,9 +1354,10 @@ ul {
         background: #0d111b;
 
         border: 1px solid var(--border);
+
         border-radius: 10px;
 
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
     }
 
     .nav-links.active {
@@ -1366,61 +1366,66 @@ ul {
 
     .nav-links a {
         padding: 12px 15px;
-
-        border-radius: 6px;
-    }
-
-    .nav-links a:hover {
-        background: var(--card);
     }
 
     .hero {
         min-height: auto;
 
-        padding-top: 120px;
-        padding-bottom: 70px;
+        padding-top: 110px;
 
-        grid-template-columns: 1fr;
+        padding-bottom: 70px;
     }
 
     .hero h1 {
-        font-size: clamp(3rem, 15vw, 4.5rem);
+        font-size: 3.5rem;
 
-        letter-spacing: -3px;
+        letter-spacing: -2px;
     }
 
     .hero-description {
         font-size: 15px;
     }
 
-    .code-content {
-        padding: 18px;
+    .section {
+        padding: 70px 20px;
     }
 
-    .code-content code {
-        font-size: 10px;
+    .section-alt {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .section-heading {
-        gap: 12px;
-
         margin-bottom: 35px;
     }
 
     .section-heading h2 {
-        font-size: 26px;
+        font-size: 27px;
     }
 
-    .skills-grid {
+    .skills-grid,
+    .projects-grid {
         grid-template-columns: 1fr;
     }
 
-    .skill-card {
-        padding: 25px;
+    .featured-project {
+        grid-column: span 1;
+    }
+
+    .project-highlights {
+        grid-template-columns: 1fr;
     }
 
     .about-stats {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .stat-card {
+        padding: 18px 5px;
+    }
+
+    .stat-number {
+        font-size: 21px;
     }
 
     .experience-card {
@@ -1430,47 +1435,25 @@ ul {
     .experience-top {
         flex-direction: column;
 
-        gap: 10px;
+        gap: 8px;
     }
 
     .experience-date {
         white-space: normal;
     }
 
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .featured-project {
-        grid-column: span 1;
-    }
-
-    .project-card {
-        min-height: auto;
-
-        padding: 25px;
-    }
-
-    .project-highlights {
-        grid-template-columns: 1fr;
-    }
-
     .education-card {
         flex-direction: column;
 
         align-items: flex-start;
+
+        padding: 25px;
     }
 
     .education-details {
         width: 100%;
 
         justify-content: flex-start;
-
-        gap: 35px;
-    }
-
-    .education-details div {
-        text-align: left;
     }
 
     .form-row {
@@ -1478,7 +1461,7 @@ ul {
     }
 
     .contact-form {
-        padding: 22px;
+        padding: 25px;
     }
 
     .footer-container {
@@ -1495,6 +1478,10 @@ ul {
 
 @media (max-width: 450px) {
 
+    .hero h1 {
+        font-size: 3rem;
+    }
+
     .hero-buttons {
         flex-direction: column;
 
@@ -1510,24 +1497,32 @@ ul {
     }
 
     .section-heading {
-        flex-direction: column;
-
-        gap: 5px;
+        align-items: flex-start;
     }
 
-    .experience-top h3 {
-        font-size: 20px;
-    }
-
-    .project-content h3 {
-        font-size: 20px;
+    .about-stats {
+        grid-template-columns: 1fr;
     }
 
     .education-main {
         align-items: flex-start;
     }
 
-    .education-main h3 {
-        font-size: 18px;
+    .education-details {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .education-details div {
+        text-align: left;
+    }
+
+    .code-content {
+        padding: 20px;
+    }
+
+    .code-content code {
+        font-size: 10px;
     }
 }
