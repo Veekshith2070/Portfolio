@@ -1,117 +1,197 @@
-# Veekshith — Personal Portfolio
+# Veekshith — AI & Software Developer Portfolio
 
-Personal portfolio website of **Venkata Veekshith**, a B.Tech Electrical Engineering student at **IIT Bhubaneswar** focused on software development, full-stack applications, and problem solving.
+Personal portfolio website for Veekshith, an Electrical Engineering student at IIT Bhubaneswar focused on machine learning, deep learning, data-driven systems, signal processing and software engineering.
 
-## 🚀 Live Portfolio
+---
 
-[View Portfolio](https://veekshith2070.github.io/Portfolio/)
+## About
 
-## 👨‍💻 About
+I’m interested in building systems at the intersection of:
 
-I am an Electrical Engineering student at IIT Bhubaneswar with a strong interest in software development.
-
-My current focus includes:
-
-- Full-Stack Web Development
-- React.js
-- Node.js & Express.js
-- PostgreSQL
-- Data Structures & Algorithms
+- Machine Learning
+- Deep Learning
+- Data Processing
+- Signal Processing
+- Generative AI
+- Retrieval-Augmented Generation
+- Backend Development
 - Software Engineering
 
-I also have research experience working with EEG and intracranial EEG (iEEG) signal reconstruction.
+My work includes machine-learning research, time-series analytics, anomaly detection and full-stack software development.
 
-## 🛠️ Tech Stack
+---
 
-### Languages
+## Research Experience
 
-- C++
-- JavaScript
+### EEG → iEEG Signal Reconstruction
+
+Research work at IIT Bhubaneswar focused on reconstructing intracranial brain signals from scalp EEG measurements.
+
+Key areas of work:
+
+- Synthetic paired EEG/iEEG dataset generation
+- Latent neural source modelling
+- IED and Non-IED event generation
+- Source-level signal injection
+- Automated event-window extraction
+- Signal realism evaluation
+- Power spectral density analysis
+- Inter-subject spectral similarity
+- VAE-cGAN based reconstruction
+- SPADE residual blocks
+- LSTM layers
+- PatchGAN
+
+### Technologies
+
 - Python
-- SQL
+- NumPy
+- PyTorch
+- MNE-Python
+- Deep Learning
+- Signal Processing
 
-### Frontend
+---
 
-- HTML
-- CSS
+# Featured Project
+
+## IoT Sensor Telemetry & Anomaly Detection
+
+An end-to-end data processing pipeline for high-frequency multi-sensor IoT telemetry.
+
+The system processes telemetry such as:
+
+- Temperature
+- Vibration
+- Pressure
+
+### Key Features
+
+- Data ingestion
+- Data cleaning
+- Missing-value imputation
+- Rolling-window statistical aggregation
+- Time-series feature engineering
+- Z-score based anomaly detection
+- Operational anomaly logging
+- Feature-matrix preparation for downstream analysis
+
+### Technologies
+
+- Python
+- Pandas
+- NumPy
+- Time-Series Analytics
+- Statistical Anomaly Detection
+
+---
+
+# Software Project
+
+## SplitWise Clone
+
+A full-stack expense-sharing application inspired by Splitwise.
+
+### Features
+
+- User authentication
+- JWT-based authorization
+- Protected REST endpoints
+- PostgreSQL relational data modelling
+- Equal expense splitting
+- Custom expense splitting
+- Balance calculation
+- Settlement workflow
+- Frontend/backend integration
+
+### Technologies
+
 - React.js
-- Vite
-
-### Backend
-
 - Node.js
 - Express.js
+- PostgreSQL
 - REST APIs
-- JWT Authentication
+- JWT
 
-### Database & Tools
+### Links
 
+GitHub:
+
+https://github.com/Veekshith2070/splitwise-clone
+
+Live Demo:
+
+https://splitwise-clone-frontend-so3i.onrender.com
+
+---
+
+# Technical Skills
+
+## Languages
+
+- Python
+- C++
+- SQL
+- JavaScript
+
+## AI & Machine Learning
+
+- PyTorch
+- NumPy
+- Pandas
+- SciPy
+- Deep Learning
+- Time-Series Analytics
+
+## GenAI & Retrieval
+
+- RAG
+- LangChain
+- ChromaDB
+- Embeddings
+- LLM Applications
+
+## Data & Signal Processing
+
+- MNE-Python
+- Signal Processing
+- MATLAB
+
+## Software Engineering
+
+- REST APIs
+- Node.js
+- Express.js
 - PostgreSQL
 - SQLite
 - Git
 - GitHub
-- Render
-
-## 💻 Featured Projects
-
-### SplitWise Clone
-
-Full-stack expense management application for creating groups, tracking expenses, splitting payments, and managing settlements.
-
-**Tech:** React, Node.js, Express.js, PostgreSQL, JWT
-
-[GitHub](https://github.com/Veekshith2070/splitwise-clone)
-
-### Placement Checklist
-
-React-based application for tracking placement preparation across DSA, Core CS, Aptitude, and Projects.
-
-**Tech:** React.js, JavaScript, CSS
-
-[Live Demo](https://veekshith2070.github.io/placement-checklist/)  
-[GitHub](https://github.com/Veekshith2070/placement-checklist)
-
-### DSA Visualizer
-
-Interactive visualization tool demonstrating sorting algorithms through step-by-step comparisons and swaps.
-
-**Tech:** HTML, CSS, JavaScript
-
-[Live Demo](https://veekshith2070.github.io/DSA-visualizer/)  
-[GitHub](https://github.com/Veekshith2070/DSA-visualizer)
-
-## 🔬 Research Experience
-
-### Research Intern — IIT Bhubaneswar
-
-Worked on EEG and intracranial EEG (iEEG) signal reconstruction.
-
-Key areas included:
-
-- EEG/iEEG dataset generation
-- Signal-processing workflows
-- Python and MATLAB
-- Synthetic EEG/iEEG data evaluation
-- Signal reconstruction approaches
-
-## 🎓 Education
-
-**Indian Institute of Technology Bhubaneswar**
-
-B.Tech in Electrical Engineering  
-2023 – 2027  
-CGPA: **8.54**
-
-## 📫 Contact
-
-- Email: 23ee01008@iitbbs.ac.in
-- GitHub: [Veekshith2070](https://github.com/Veekshith2070)
-- LinkedIn: [Venkata Veekshith](https://linkedin.com/in/bondada-venkata-veekshith)
-
-## 📄 Resume
-
-[View Resume](Veekshith_Resume.pdf)
+- Linux / Bash
 
 ---
 
-Built with HTML, CSS and JavaScript.
+# Website
+
+This portfolio is built using:
+
+- HTML5
+- CSS3
+- Vanilla JavaScript
+- Google Fonts
+- Formspree
+
+No frontend framework is required.
+
+---
+
+# Project Structure
+
+```text
+portfolio/
+│
+├── index.html
+├── style.css
+├── script.js
+├── README.md
+└── assets/
+    └── images/
